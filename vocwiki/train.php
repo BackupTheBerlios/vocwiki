@@ -391,9 +391,9 @@ if($show_info==1)
   
   print "<input type=\"hidden\" name=\"submit\" value=\" start \">";
   print "<input type=\"submit\" name=\"submit\" value=\" start \"></form>";
-  print "<br><br>";
-  
-  print "<a href=\"pdf/test.php?source=".$source."&type=".$type."&freesearch=".$freesearch."&file_id=".$file_id."\">".("generate a Test as PDF")."</a> (only ISO-8859-1) [no arabic, asian languages!]";
+
+//  print "<br><br>";
+//  print "<a href=\"pdf/test.php?source=".$source."&type=".$type."&freesearch=".$freesearch."&file_id=".$file_id."\">".("generate a Test as PDF")."</a> (only ISO-8859-1) [no arabic, asian languages!]";
   
   print "<br><br>";
 }

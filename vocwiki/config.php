@@ -2,7 +2,7 @@
 
 // configuration for vocwiki
 //
-// $Id: config.php,v 1.1 2004/05/05 18:06:26 bolsog Exp $	
+// $Id: config.php,v 1.2 2004/05/05 18:59:36 bolsog Exp $	
 
 
 //
@@ -14,18 +14,7 @@
 $WEB_LOCATION="vocwiki.berlios.de";
 
 
-// only mysql is supported at moment
-
-// change for your needs ...
-$DBParams = 
-array(
-      "mysql_server" => "localhost",
-      "mysql_user" => "root",
-      "mysql_pwd" => "",
-      "mysql_db" => "vocwiki",
-      "mysql_prefix" => "vocwiki_"
-      );
-
+include("dbpw.php");
 
 // end of config part
 
@@ -36,10 +25,10 @@ array(
 
 // todo: save LANG in usersettings!!!
 
-setlocale(LC_ALL,$LANG);
+//setlocale(LC_ALL,$LANG);
 
-bindtextdomain("vocwiki", "./locale");
-textdomain("vocwiki");
+//bindtextdomain("vocwiki", "./locale");
+//textdomain("vocwiki");
 
 // session
 session_start();
