@@ -31,6 +31,13 @@ $link = mysql_connect($DBParams["mysql_server"], $DBParams["mysql_user"], $DBPar
     or die("Keine Verbindung moeglich: " . mysql_error());
 mysql_select_db($DBParams["mysql_db"]) or die("Auswahl der Datenbank fehlgeschlagen");
 
+?>
+
+<table>
+<tr><td valign="top">
+
+<?php
+
 print ("Vocabularies edited:")."<br>";
 
 $result = mysql_query("SELECT DISTINCT author , count(*) as cnt FROM ".$DBParams["mysql_prefix"]."data GROUP BY author order by cnt desc");
@@ -42,7 +49,13 @@ while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 }
 print "</table>";
 
-print "<br><br>";
+
+?>
+
+</td><td width="70"></td><td valign="top">
+
+<?php
+
 print ("Vocabularies tested:")."<br>";
 
 $result = mysql_query("SELECT DISTINCT username, count(*) as cnt, sum(allx) as allasked FROM ".$DBParams["mysql_prefix"]."rating GROUP BY username order by cnt desc");
@@ -57,8 +70,11 @@ while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 }
 print "</table>";
 
-
 ?>
+
+</td></tr>
+</table>
+
 
 <?php
 print "<br/><br/></div>";
