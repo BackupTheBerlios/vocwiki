@@ -91,7 +91,8 @@ if(strlen($loginx)>0 and strlen($password1)>0)
 
 	mysql_select_db($DBParams["mysql_db"]) or die("problems, connecting to database");
 
-	$query="select login from ".$DBParams["mysql_prefix"]."user where login='$loginx'";
+	$query="select name from ".$DBParams["mysql_prefix"]."users where name='$loginx'";
+
 
 	$result=mysql_query($query,$link);
 	
@@ -99,22 +100,23 @@ if(strlen($loginx)>0 and strlen($password1)>0)
 	{
 	  $pw=md5($password1);
 
-	  $query="INSERT INTO ".$DBParams["mysql_prefix"]."user (login,password,level,email,lastchange) VALUES ('$loginx','$pw',1,'$email',NOW())";
+	  $query="INSERT INTO ".$DBParams["mysql_prefix"]."users (name,password,email,signuptime) VALUES ('$loginx','$pw','$email',NOW())";
 
 	  $result = mysql_query($query,$link);
 	  if(mysql_affected_rows()==0)
 	  {
-	    print ("problems with saving!!");
+	    print ("problems with saving!!<br><br>please write a bugreport.");
 	  }
 	  else
 	  {
-	    print ("all saved");
+	    print ("your data was saved successfully.<br><br><a href=\"login.php\">login now</a>");
+	    
 	  }
 
 	}
 	else
 	{
-	    print ("user already in database");
+	    print ("This user is already in database.<br><br><a href=\"register.php\">register an other account</a> or <a href=\"login.php\">login</a>");
 	}
 	mysql_close ($link);
     }

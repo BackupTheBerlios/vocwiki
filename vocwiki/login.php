@@ -47,8 +47,7 @@ print ("password").":";
 </table>
 <br>
 <?php
-//    print "<a href=\"wakka/\">".("register")."</a> ";
-print "registrationform to be done ...<br>closed test";
+    print "<a href=\"register.php\">".("register")."</a> ";
 ?>
 <br><br></div>
 

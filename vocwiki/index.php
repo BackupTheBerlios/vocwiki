@@ -51,8 +51,8 @@ while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 </td>
 <td valign="top">
 <div class="xxx">
-Nun ist das vocwiki auf berlios beheimatet.<br>
-erstmal gibt es keine registration, da das formular dazu nicht mehr aktuell ist.<br>
+Das vocwiki hat nun auf Berlios ein Zuhause gefunden.<br>
+<br>
 bugreports/feature request/forum gibt es unter: <a href="http://developer.berlios.de/projects/vocwiki/">http://developer.berlios.de/projects/vocwiki/</a><br>
 <br>
 <a href="http://developer.berlios.de">
