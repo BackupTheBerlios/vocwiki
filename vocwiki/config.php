@@ -20,7 +20,7 @@
 
 // configuration for vocwiki
 //
-// $Id: config.php,v 1.5 2004/06/11 12:51:23 bolsog Exp $	
+// $Id: config.php,v 1.6 2004/07/10 15:41:24 bolsog Exp $	
 
 
 //
@@ -47,6 +47,10 @@ include("dbpw.php");
 //textdomain("vocwiki");
 
 // session
+
+// we want more than 1440 seconds ...
+ini_set('session.gc_maxlifetime','604800');
+
 session_start();
 
 if(!isset($login_form) || !isset($pwd_form))

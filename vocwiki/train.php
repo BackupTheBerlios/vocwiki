@@ -230,8 +230,8 @@ if(/*isset($trainx)*/ $submit==" start " or $submit==" next ")
       print $vals['translation']."<br><br><br>";
     }
 
-    print "<form action=\"train.php\" method=\"post\">";
-    print "<input name=\"usersol\" type=\"text\" size=\"40\" maxlength=\"40\"> &nbsp;";
+    print "<form action=\"train.php\" method=\"post\" autocomplete=\"off\">";
+    print "<input name=\"usersol\" type=\"text\" size=\"40\" maxlength=\"40\" accesskey=\"x\"> &nbsp;";
     print "<input type=\"hidden\" name=\"id\" value=\"".$idx."\">";
     print "<input type=\"hidden\" name=\"source\" value=\"".$source."\">";
     print "<input type=\"hidden\" name=\"type\" value=\"".$type."\">";
@@ -241,8 +241,9 @@ if(/*isset($trainx)*/ $submit==" start " or $submit==" next ")
     print "<input type=\"hidden\" name=\"askfor\" value=\"".$askfor."\">";
     print "<input type=\"hidden\" name=\"r_askfor\" value=\"".$r_askfor."\">";
     print "<input type=\"hidden\" name=\"submit\" value=\" check \">";
-    print "<input type=\"submit\" name=\"submit\" value=\" check \"></form>";
+    print "<input type=\"submit\" name=\"submit\" value=\" check \" accesskey=\"c\"></form>";
     print "<br><br>";
+    print "hint: alt-x for edit-field / alt-c for check<br>";
   }
   else
   {
@@ -344,10 +345,11 @@ else
     if(!$correct)
     print "checked";
     print ">wrong&nbsp;&nbsp;";
-    print "<input type=\"submit\" name=\"submit\" value=\" next \"></form>";
+    print "<input type=\"submit\" name=\"submit\" value=\" next \" accesskey=\"n\"></form>";
     print "<br><br>";
     print "<a href=\"edit.php?element_id=".$id."\" target=\"_blank\">";
     print ("<b>edit</b> this data record in a <b>new window</b>")."</a><br>";
+    print "<br>hint: alt-n for next<br>";
   }
   else
   {
