@@ -231,7 +231,7 @@ if(isset($HTTP_SESSION_VARS["session_file"]) and isset($HTTP_SESSION_VARS["sessi
     print "<br><b>".("Info: ")."</b><br>";
     print ("On 'Save' all values will be interted, under YOUR id!"); 
     print "</td><tr>";
-    print "<tr><td valign=\"top\">";
+/*    print "<tr><td valign=\"top\">";
     print "<pre>subtype kann bei original/translation ein example paar sein, z.b.:\n";
     print "original     example1  Peter loves Mary.\n";
     print "translation  example1  Peter liebt Maria.\n";
@@ -239,6 +239,7 @@ if(isset($HTTP_SESSION_VARS["session_file"]) and isset($HTTP_SESSION_VARS["sessi
     print "translation  example2  Peter liebt sein Leben.\n";
     print "</pre>";
     print "</td><tr>";
+*/
     print "</table>";
 
     if(isset($element_id))

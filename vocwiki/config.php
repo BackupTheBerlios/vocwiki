@@ -20,7 +20,7 @@
 
 // configuration for vocwiki
 //
-// $Id: config.php,v 1.3 2004/05/05 21:36:06 bolsog Exp $	
+// $Id: config.php,v 1.4 2004/05/27 22:44:36 bolsog Exp $	
 
 
 //
@@ -29,8 +29,6 @@
 // available: German "de"
 
 // your weblocation:
-$WEB_LOCATION="vocwiki.berlios.de";
-
 
 include("dbpw.php");
 
