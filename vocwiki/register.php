@@ -27,7 +27,7 @@ include("header.php");
 
 <?php
 print "<br><br><b>";
-print _("register new user:<br>");
+print ("register new user:<br>");
 print "</b>";
 
 ?>
@@ -37,7 +37,7 @@ print "</b>";
 <tr>
 <td>
 <?php
-print _("login: ");
+print ("login: ");
 ?>
 </td><td>
 <input name="loginx" type="text" size="15">
@@ -47,7 +47,7 @@ print _("login: ");
 <tr>
 <td>
 <?php
-print _("email: ");
+print ("email: ");
 ?>
 </td><td>
 <input name="email" type="text" size="30">
