@@ -295,10 +295,13 @@ else
 	{
 	  $vals[$row['typ']].=" <br> ";
 	}
-      $vals[$row['typ']].=$row['content'];
-      if(($askfor=="trans" or $r_askfor==0) and $row['typ']=="translation" and $row['content']==$usersol)
+      $content=$row['content'];
+      $content=ereg_replace("^ +","",$content);
+      $content=ereg_replace(" +$","",$content);
+      $vals[$row['typ']].=$content;
+      if(($askfor=="trans" or $r_askfor==0) and $row['typ']=="translation" and $content==$usersol)
       $correct=true;
-      if(($askfor=="orig" or $r_askfor==1) and $row['typ']=="original" and $row['content']==$usersol)
+      if(($askfor=="orig" or $r_askfor==1) and $row['typ']=="original" and $content==$usersol)
       $correct=true;
       }
     }
