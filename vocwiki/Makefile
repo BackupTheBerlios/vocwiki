@@ -1,6 +1,11 @@
-all:
 
+USERID=bolsog
 
-transfer:
-#	scp *.php *.txt *.css bol@helena.bawue.de:~/public_html/vocwiki/
-	scp *.php *.css bolsog@shell.berlios.de:/home/groups/vocwiki/htdocs/
+nothing:
+
+testsys:
+	scp *.php *.css $(USERID)@shell.berlios.de:/home/groups/vocwiki/htdocs/test/
+
+prodsys:
+	scp *.php *.css $(USERID)@shell.berlios.de:/home/groups/vocwiki/htdocs/
+
