@@ -80,7 +80,13 @@ if(isset($HTTP_SESSION_VARS["session_file"]) and isset($HTTP_SESSION_VARS["sessi
       {
 	if($typ[$i]!="-" and $content[$i]!="")
 	{
-	  $query = "insert into ".$DBParams["mysql_prefix"]."data (fk_element,version,typ,subtype,content,author,lastchange) values (".$element_id.",".$version.",'".$typ[$i]."','".$subtype[$i]."','".$content[$i]."','".$author."',NOW());";
+	  $content_x=$content[$i];
+	  if($typ[$i]=="original")
+	  {
+	    $content_x=utf8ToUnicodeEntities($content_x);
+	  }
+
+	  $query = "insert into ".$DBParams["mysql_prefix"]."data (fk_element,version,typ,subtype,content,author,lastchange) values (".$element_id.",".$version.",'".$typ[$i]."','".$subtype[$i]."','".$content_x."','".$author."',NOW());";
 	  
 //	  print $query."<br>";
 	  $result = mysql_query($query);

@@ -21,7 +21,7 @@
 
 // configuration for vocwiki
 //
-// $Id: dbpw.php,v 1.2 2004/05/05 21:36:06 bolsog Exp $	
+// $Id: dbpw.php,v 1.3 2004/06/11 12:51:23 bolsog Exp $	
 
 // only mysql is supported at moment
 $DBParams = 
@@ -33,5 +33,5 @@ array(
       "mysql_prefix" => "vocwiki_"
       );
 
-
+$WEB_LOCATION="server/vocwiki";
 ?>

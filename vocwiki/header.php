@@ -57,10 +57,8 @@ print "<a href=\"list.php\">".("list")."</a> ";
 }
 ?>
 <?php 
-/*
-</td><td width="50">
-<a href="phpwiki/" target="_blank">documentation-wiki</a>
-*/
+print "</td><td width=\"50\">";
+print "<a href=\"stats.php\">".("stats")."</a>";
 ?>
 </td><td align="right">
 <?php

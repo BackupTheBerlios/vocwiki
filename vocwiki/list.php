@@ -264,7 +264,12 @@ if($num_rows>0)
 	  {
 	    $vals[$row['typ']].=" / ";
 	  }
-	  $vals[$row['typ']].=$row['content'];
+	  $x=$row['content'];
+/*	  if($row['typ']=='original')
+	  {
+	    $x=utf8ToUnicodeEntities($x);
+	  }*/
+	  $vals[$row['typ']].=$x;
 	}
       }
       $allx=$row["allx"];
